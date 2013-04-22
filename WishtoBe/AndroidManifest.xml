@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="be.wishto"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <application
+        android:icon="@drawable/ic_main"
+        android:label="@string/app_name" >
+        <activity
+            android:label="WishList Prototype"
+            android:name=".AndroidDatabaseActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="Edit your wish"
+            android:name=".EditWishActivity" >
+            <intent-filter >
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="be.wishto.EditWishActivity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="Show Me the Web"
+            android:name=".WishWebView" >
+            <intent-filter >
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="be.wishto.WishWebView" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

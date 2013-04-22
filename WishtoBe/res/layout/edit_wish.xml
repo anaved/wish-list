@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/LinearLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/todo_edit_summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Summary" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.97"
+            android:text="@string/tag" />
+
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_add" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/wishtypes" >
+    </Spinner>
+
+    <EditText
+        android:id="@+id/w_date"
+        android:layout_width="176dp"
+        android:layout_height="wrap_content"
+        android:hint="End Date"
+        android:inputType="date"
+        android:onClick="date_click" />
+
+    <EditText
+        android:id="@+id/todo_edit_description"
+        android:layout_width="fill_parent"
+        android:layout_height="192dp"
+        android:gravity="top"
+        android:hint="Description"
+        android:imeOptions="actionNext" >
+    </EditText>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/todo_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="save_wish"
+            android:text="Save My Wish" >
+        </Button>
+
+        <Button
+            android:id="@+id/todo_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="cancel"
+            android:text="Cancel" >
+        </Button>
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
